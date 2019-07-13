@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="loading"
+            type="boolean" />
+        <variable
+            name="changePhone"
+            type="boolean" />
+        <variable
+            name="line"
+            type="boolean" />
+        <variable
+            name="resend"
+            type="boolean" />
+        <variable
+            name="verifyCode"
+            type="boolean" />
+        <variable
+            name="signupActivity"
+            type="com.athira.otpverify.SignupActivity" />
+    </data>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorNewToolbar">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            style="@style/ToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorNewToolbar">
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_size">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Phone Verification"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="15dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_toolbar"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@drawable/shape_rec_round_white_up">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="20dp"
+                android:text="Please enter your phone number"
+                android:textColor="#60303139"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/iv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_header"
+                android:background="@color/gray_2" />
+
+            <TextView
+                android:id="@+id/tv_head_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_bg"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:text="Country / Region"
+                android:textColor="@color/textColorBlack" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_head_region"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/tv_head_region"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="25dp"
+                android:text="India" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_head_region"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@color/gray_2" />
+
+            <RelativeLayout
+                android:id="@+id/rl_phone"
+                android:layout_below="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp">
+                <TextView
+                    android:id="@+id/tv_countrycode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="+91"
+                    android:inputType="phone|number"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="14sp"/>
+                <View
+                    android:layout_toRightOf="@+id/tv_countrycode"
+                    android:layout_centerInParent="true"
+                    android:layout_width="1dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/gray_2"/>
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:hint="Your Phone Number"
+                    android:inputType="phone|number"
+                    android:maxLength="10"
+                    android:textColor="@color/textColorBlack"
+                    android:textColorHint="@color/gray_4"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"/>
+            </RelativeLayout>
+            <!--<com.appendous.dareage.view.TextViewRalewayRegular
+                android:id="@+id/tv_countrycode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_2"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="+91"
+                android:inputType="phone|number"
+                android:paddingBottom="10dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/textColorBlack"
+                android:textSize="14sp" />
+
+
+            <com.appendous.dareage.view.EditTextRalewayRegular
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/view_2"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Your Phone Number"
+                android:inputType="phone|number"
+                android:paddingBottom="10dp"
+                android:maxLength="10"
+                android:paddingTop="10dp"
+                android:textColor="@color/textColorBlack"
+                android:textColorHint="@color/gray_4"
+                android:textSize="14sp" />-->
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_phone"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@color/gray_2"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/view_3"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:hint="Verification Code"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:visibility="@{verifyCode?View.VISIBLE:View.GONE}" />
+
+                <TextView
+                    android:id="@+id/tv_resend_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="resend"
+                    android:layout_alignBottom="@id/etOtp"
+                    android:layout_alignTop="@id/etOtp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="14sp"
+                    android:visibility="@{resend?View.VISIBLE:View.GONE}"
+                    android:onClick="@{()->signupActivity.resendOTP(etPhone.getText().toString())}"/>
+
+                <View
+                    android:id="@+id/view_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/etOtp"
+                    android:background="@color/gray_2"
+                    android:visibility="@{line?View.VISIBLE:View.GONE}" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/shape_rec_round_purple"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="66dp"
+                    android:paddingRight="66dp"
+                    android:paddingTop="10dp"
+                    android:text="Send OTP"
+                    android:textColor="@color/white"
+                    android:onClick="@{()->signupActivity.sendOTP(etPhone.getText().toString(),etOtp.getText().toString())}"/>
+
+                <TextView
+                    android:id="@+id/tv_change_phone_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_centerHorizontal="true"
+                    android:text="Change Phone Number"
+                    android:padding="10dp"
+                    android:layout_below="@id/tv_send"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="10sp"
+                    android:visibility="@{changePhone?View.VISIBLE:View.GONE}"
+                    android:onClick="@{()->signupActivity.changePhone()}"/>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/progress_bar"
+                    android:layout_marginTop="15dp"
+                    android:visibility="@{loading?View.VISIBLE:View.GONE}"
+                    android:layout_below="@id/tv_change_phone_no"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
+</layout>

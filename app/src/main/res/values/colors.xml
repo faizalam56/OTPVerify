@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#4E0077</color>
+    <color name="colorPrimaryDark1">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorNewToolbar">#4E0077</color>
+    <color name="colorAppTheme">#4E0077</color>
+    <color name="colorAppTheme_opt_45">#734E0077</color>
+
+    <!-- basic colors -->
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_opt_45">#73ffffff</color>
+    <color name="white_opt_15">#26ffffff</color>
+    <color name="demo_dark_transparent">#24000000</color>
+
+
+    <color name="gray">#4b4545</color>
+    <color name="lineColor">#9E9E9E</color>
+    <color name="textColorGray">#9699A2</color>
+    <color name="textColorBlack">#303139</color>
+    <color name="purple">#7041BF</color>
+
+    <color name="darkGreenLogo">#0C757F</color>
+
+    <!-- demo colors (for card-background) -->
+
+    <color name="bluegray300">#90A4AE</color>
+
+    <!-- gray-->
+    <color name="gray_1">#DCDCDC</color>
+    <color name="gray_2">#D3D3D3</color>
+    <color name="gray_4">#A9A9A9</color>
+    <color name="gray_5">#808080</color>
+    <color name="gray_9">#2F4F4F</color>
+
+    <color name="off_black">#8A000000</color>
+    <color name="color_indicator">#FF4081</color>
+
+    <color name="shimmer_color">#a2878787</color>
+    <color name="shimmer_color2">#21ffffff</color>
+    <color name="demo_light_transparent">#1A000000</color>
+    <color name="default_shimmer_color">#e3e1e3</color>
+
+    <color name="placeholder_grey">#AAADC4</color>
+    <color name="placeholder_grey_20">#33AAADC4</color>
+</resources>
