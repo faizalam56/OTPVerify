@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.view.Gravity;
 import android.widget.TextView;
 
-public class Global {
+public class Globals {
     AlertDialog alertDialog;
     public void showAlertDialog(String message, Context ActivityContext) {
         final AlertDialog.Builder myDialog = new AlertDialog.Builder(

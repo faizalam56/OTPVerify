@@ -27,7 +27,8 @@ public class APIClient {
                 .build();
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://103.206.115.37/sri_chaitanya/otp/")
+                .baseUrl("https://jsonplaceholder.typicode.com/")
+                //.baseUrl("http://103.206.115.37/sri_chaitanya/otp/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
                 .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .client(httpClient)
@@ -36,3 +37,4 @@ public class APIClient {
         return retrofit;
     }
 }
+//http://103.206.115.37/sri_chaitanya/otp/

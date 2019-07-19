@@ -1,5 +1,6 @@
 package com.athira.otpverify.network;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import java.util.Map;
@@ -16,4 +17,10 @@ public interface APIInterface {
 
     @GET("index.php/")
     Call<JsonObject> verifyOTP(@QueryMap Map<String,String> option);
+
+    @GET("albums")
+    Call<JsonArray> getAlbum();
+
+    @GET("photos")
+    Call<JsonArray> getPhotos(@QueryMap Map<String,String> option);
 }

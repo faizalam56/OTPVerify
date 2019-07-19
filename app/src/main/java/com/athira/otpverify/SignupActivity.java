@@ -13,7 +13,7 @@ import com.athira.otpverify.databinding.ActivitySignupBinding;
 import com.athira.otpverify.dto.Resource;
 import com.athira.otpverify.model.SendOTPResponse;
 import com.athira.otpverify.model.VerifyOTPResponse;
-import com.athira.otpverify.utils.Global;
+import com.athira.otpverify.utils.Globals;
 import com.athira.otpverify.viewmodel.VerifyOTPViewModel;
 import com.athira.otpverify.viewmodel.sendOTPViewModel;
 
@@ -25,7 +25,7 @@ public class SignupActivity extends AppCompatActivity {
     private boolean mOtpSent = false;
     private sendOTPViewModel mSendViewModel;
     private VerifyOTPViewModel mVerifyViewModel;
-    private Global mGlobals;
+    private Globals mGlobals;
     private String appOTP;
     private String phone;
     @Override
@@ -34,7 +34,7 @@ public class SignupActivity extends AppCompatActivity {
         binding = DataBindingUtil.inflate(getLayoutInflater(),R.layout.activity_signup,null,false);
         setContentView(binding.getRoot());
         binding.setSignupActivity(this);
-        mGlobals = new Global();
+        mGlobals = new Globals();
         sendOtpProvider();
         verifyOtpProvider();
     }
